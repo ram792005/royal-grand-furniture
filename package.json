@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && cp -r out/_next out/index.html out/404.html out/furniture-hub public/ && cp out/stores/royal-grand-furniture/index.html public/stores/royal-grand-furniture/index.html && rm -rf out",
     "start": "next start"
   },
   "dependencies": {
