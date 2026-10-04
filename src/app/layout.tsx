@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Royal Grand Furniture | Architectural Mastery & Bespoke Living",
@@ -46,7 +47,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body style={{ margin: 0, padding: 0 }}>{children}</body>
+      <body style={{ margin: 0, padding: 0 }}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
